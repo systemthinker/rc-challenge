@@ -1,14 +1,18 @@
 .article-row
     display: grid
+    display: -ms-grid
     grid-template-columns: repeat(3, 1fr)
+    -ms-grid-columns: 1fr 1fr 1fr
     grid-gap: $bu*2
     margin: $bu 0
     margin-bottom: $bu*2
 
     @media (max-width: $sm-tb)
         grid-template-columns: repeat(2, 1fr)
+        -ms-grid-columns: 1fr 1fr
     @media (max-width: $md-ph)
         grid-template-columns: repeat(1, 1fr)
+        -ms-grid-columns: 1fr
     
 
     .article-item
@@ -63,7 +67,6 @@
             &:hover
                 color: shade($co-3, 10%)
 
-#seo:nth-child(2)
+#seo-first-column
     padding-bottom: 20px
-
 
