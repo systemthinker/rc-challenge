@@ -5,6 +5,12 @@
     margin: $bu 0
     margin-bottom: $bu*2
 
+    @media (max-width: $sm-tb)
+        grid-template-columns: repeat(2, 1fr)
+    @media (max-width: $md-ph)
+        grid-template-columns: repeat(1, 1fr)
+    
+
     .article-item
         display: flex
         flex-direction: column
@@ -41,6 +47,7 @@
             padding: $bu/2 $bu !important
 
         .article-item-desc
+            margin-top: 10px
             font-size: 0.8em
 
         .article-item-action
@@ -55,4 +62,8 @@
             color: $co-3
             &:hover
                 color: shade($co-3, 10%)
+
+#seo:nth-child(2)
+    padding-bottom: 20px
+
 
