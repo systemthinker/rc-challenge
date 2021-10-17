@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "dependencies": {
-    "grunt-contrib-rename": "^0.2.0"
+    "grunt-contrib-rename": "^0.2.0",
+    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
