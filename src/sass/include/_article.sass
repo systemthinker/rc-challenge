@@ -20,11 +20,38 @@
         flex-direction: column
         position: relative
         min-height: $bu*20
-        overflow: hidden
+        background: white
         background-color: $co-1
-        border-radius: $br
+        border-radius: 20px
         box-shadow: $bxS
+        
+               
+        
+        
+        
+        
 
+        &:after
+        
+            position: absolute
+            content: ""
+            top: -5px
+            left: -5px
+            z-index: -1
+            width: calc(100% + (5px * 2))
+            height: calc(100% + (5px * 2))
+            background: linear-gradient(hsl(314, 85%, 66%), hsl(359, 85%, 66%), hsl(44, 85%, 66%),hsl(51,100%,50%))
+            background-size: 300% 300%
+            border-radius: 20px
+            animation: moveGradient 4s alternate infinite
+            opacity: 0
+
+        &:hover::after 
+            opacity: 1
+            
+
+ 
+      
         > *
             &:not(.article-item-img)
                 padding: $bu/2 $bu
@@ -49,17 +76,22 @@
             position: relative
             font-weight: $b
             padding: $bu/2 $bu !important
+            background: $co-1
 
         .article-item-desc
             margin-top: 10px
             font-size: 0.8em
+            background: $co-1
 
         .article-item-action
+            border-radius: 20px
+            background: $co-1
             display: flex
             justify-content: center
             padding: $bu
 
         .article-item-productinfo
+            
             display: block
             position: relative
             padding: 0
@@ -69,4 +101,9 @@
 
 #seo-first-column
     padding-bottom: 20px
+
+@keyframes moveGradient
+    50%
+        background-position: 100% 50%
+
 

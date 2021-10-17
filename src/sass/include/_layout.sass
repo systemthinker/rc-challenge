@@ -13,10 +13,15 @@ body
     #content
         position: relative
         margin: 0 auto
+        padding: 0 20px
         width: 100%
         max-width: $max
         @media (max-width: $md-tb)
             width: calc( 100% - 30px )
+        @media (max-width: $sm-ph)
+            padding: 0
+            width: 93vw
+            margin-left: 1vw
 
         > .row
             margin-bottom: $bu
